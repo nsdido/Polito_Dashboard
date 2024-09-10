@@ -1,0 +1,54 @@
+﻿@model Climate_Watch.Models.RuleModel
+@{
+    ViewData["Title"] = "Create Rule";
+}
+
+<h2>Create Rule</h2>
+<form asp-action="CreateRuleView">
+    <div class="form-group">
+        <label asp-for="Src" class="control-label"></label>
+        <input asp-for="Src" class="form-control" />
+        <span asp-validation-for="Src" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Entity" class="control-label"></label>
+        <input asp-for="Entity" class="form-control" />
+        <span asp-validation-for="Entity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Field" class="control-label"></label>
+        <input asp-for="Field" class="form-control" />
+        <span asp-validation-for="Field" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Value" class="control-label"></label>
+        <input asp-for="Value" class="form-control" />
+        <span asp-validation-for="Value" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Dst" class="control-label"></label>
+        <input asp-for="Dst" class="form-control" />
+        <span asp-validation-for="Dst" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Opt" class="control-label"></label>
+        <input asp-for="Opt" class="form-control" />
+        <span asp-validation-for="Opt" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+            <label asp-for="Desc" class="control-label"></label>
+            <input asp-for="Desc" class="form-control" />
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="DefinedRuleView">Back to List</a>
+</div>

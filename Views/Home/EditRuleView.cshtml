@@ -1,0 +1,62 @@
+﻿@model Climate_Watch.Models.RuleModel
+
+@{
+    ViewData["Title"] = "Edit Rule";
+}
+
+<h2>Edit Rule</h2>
+
+<form asp-action="EditRuleView">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Src" class="control-label"></label>
+        <input asp-for="Src" class="form-control" />
+        <span asp-validation-for="Src" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Entity" class="control-label"></label>
+        <input asp-for="Entity" class="form-control" />
+        <span asp-validation-for="Entity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Field" class="control-label"></label>
+        <input asp-for="Field" class="form-control" />
+        <span asp-validation-for="Field" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Compare" class="control-label"></label>
+        <input asp-for="Compare" class="form-control" />
+        <span asp-validation-for="Compare" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Value" class="control-label"></label>
+        <input asp-for="Value" class="form-control" />
+        <span asp-validation-for="Value" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Dst" class="control-label"></label>
+        <input asp-for="Dst" class="form-control" />
+        <span asp-validation-for="Dst" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Opt" class="control-label"></label>
+        <input asp-for="Opt" class="form-control" />
+        <span asp-validation-for="Opt" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+            <label asp-for="Desc" class="control-label"></label>
+            <input asp-for="Desc" class="form-control" />
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

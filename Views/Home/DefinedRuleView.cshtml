@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Climate_Watch.Models.RuleModel>
+@{
+    ViewData["Title"] = "Rules";
+}
+
+<h2>Rules</h2>
+<h1></h1>
+<a asp-action="CreateRuleView" class="btn btn-primary">Create New Rule</a>
+<table class="table" style="margin-top: 10px">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Src</th>
+        <th>Entity</th>
+        <th>Field</th>
+        <th>Compare</th>
+        <th>Value</th>
+        <th>Dst</th>
+        <th>Opt</th>
+        <th>Is_deleted</th>
+        <th>Desc</th>
+        <th>Created_at</th>
+        <th>Updated_at</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Src</td>
+            <td>@item.Entity</td>
+            <td>@item.Field</td>
+            <td>@item.Compare</td>
+            <td>@item.Value</td>
+            <td>@item.Dst</td>
+            <td>@item.Opt</td>
+            <td>@item.Is_deleted</td>
+            <td>@item.Desc</td>
+            <td>@item.Created_at</td>
+            <td>@item.Updated_at</td>
+
+            <td>
+                <a asp-action="EditRuleView" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+<div id="sensorModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sensors</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="sensorModalBody">
+                <!-- Sensors will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        function showSensors(placeId) {
+            $.get('/Home/GetSensors', { placeId: placeId }, function(data) {
+                $('#sensorModalBody').html(data);
+                $('#sensorModal').modal('show');
+            });
+        }
+
+        function saveSensors() {
+            var sensors = [];
+            $('#sensorModalBody').find('input[type="checkbox"]').each(function() {
+                sensors.push({
+                    SensorID: $(this).data('sensor-id'),
+                    State: $(this).prop('checked')
+                });
+            });
+
+            $.ajax({
+                url: '/Home/UpdateSensors',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(sensors),
+                success: function(response) {
+                    if (response.success) {
+                        $('#sensorModal').modal('hide');
+                    }
+                }
+            });
+        }
+    </script>
+}
