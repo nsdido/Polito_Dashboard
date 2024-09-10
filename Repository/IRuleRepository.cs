@@ -1,4 +1,4 @@
-﻿using Climate_Watch.Models;
+﻿using Dashboard.Models;
 
 namespace Dashboard.Repository;
 

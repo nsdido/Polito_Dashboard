@@ -11,11 +11,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Climate_Watch-CD5D5E04-A514-4323-9B43-4F641FDBAF99")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Dashboard-CD5D5E04-A514-4323-9B43-4F641FDBAF99")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dashboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+defc23b6689dc53e2fdbe5421894ac6aedf7021f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+281908ae5eb636ff9cee15377dc6ed3d42d8dba7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dashboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dashboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

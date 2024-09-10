@@ -1,6 +1,6 @@
-﻿using Climate_Watch.Models.Configurations;
+﻿using Dashboard.Models.Configurations;
 
-namespace Climate_Watch.Repository;
+namespace Dashboard.Repository;
 
 public interface IConfigurationRepository {
 

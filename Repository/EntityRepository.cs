@@ -1,7 +1,7 @@
 ﻿using System.Net;
-using Climate_Watch.Models;
+using Dashboard.Models;
 
-namespace Climate_Watch.Repository;
+namespace Dashboard.Repository;
 
 public class EntityRepository : IEntityRepository {
     public IEnumerable<DefinedEntity> GetEntities()

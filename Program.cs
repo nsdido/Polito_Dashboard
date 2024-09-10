@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Climate_Watch.Data;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Data;
+using Dashboard.Models;
+using Dashboard.Repository;
 using CW_Website.Repository;
 using Dashboard.Repository;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace Climate_Watch;
+namespace Dashboard;
 
 public class Program {
     public static void Main(string[] args)

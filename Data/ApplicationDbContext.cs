@@ -1,7 +1,7 @@
-﻿using Climate_Watch.Models;
+﻿using Dashboard.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Climate_Watch.Data;
+namespace Dashboard.Data;
 
 public class ApplicationDbContext : DbContext {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

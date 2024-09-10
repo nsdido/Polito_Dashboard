@@ -1,10 +1,10 @@
-﻿using Climate_Watch.Models.Configurations;
-using Climate_Watch.Repository;
+﻿using Dashboard.Models.Configurations;
+using Dashboard.Repository;
 using CW_Website.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Climate_Watch.Controllers {
+namespace Dashboard.Controllers {
     public class ConfigurationController(IConfigurationRepository configurationRepository) : Controller {
         private readonly IConfigurationRepository _configurationRepository = configurationRepository;
 

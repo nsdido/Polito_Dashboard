@@ -1,4 +1,4 @@
-﻿namespace Climate_Watch.Models
+﻿namespace Dashboard.Models
 {
     public class DetailModelView
     {

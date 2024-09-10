@@ -2,11 +2,11 @@
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
-using Climate_Watch.Models;
+using Dashboard.Models;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
-namespace Climate_Watch.Repository;
+namespace Dashboard.Repository;
 
 public class HistoricalDataRepository:IHistoricalDataRepository {
     
@@ -17,8 +17,8 @@ public class HistoricalDataRepository:IHistoricalDataRepository {
         {
             new Claim(JwtRegisteredClaimNames.Sub, "Dashboard"),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.NameIdentifier, "Climate_Watch_User"),
-            new Claim("IsAdmin", "Climate_Watch_is_Admin"),
+            new Claim(ClaimTypes.NameIdentifier, "Dashboard_User"),
+            new Claim("IsAdmin", "Dashboard_is_Admin"),
         };
 
         // var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSecretKeyThatIsAtLeast32CharactersLong"));

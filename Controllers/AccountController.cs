@@ -1,12 +1,12 @@
 ﻿using System.Security.Claims;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Models;
+using Dashboard.Repository;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Climate_Watch.Controllers {
+namespace Dashboard.Controllers {
     public class AccountController : Controller {
         private IUserRepository _userRepository;
 

@@ -1,15 +1,15 @@
 using System.Diagnostics;
 using System.Globalization;
-using Climate_Watch.Data;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Data;
+using Dashboard.Models;
+using Dashboard.Repository;
 using CW_Website.Repository;
 using Dashboard.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Climate_Watch.Controllers {
+namespace Dashboard.Controllers {
     public class HomeController : Controller {
         private ApplicationDbContext _context;
         private IHistoricalDataRepository _historicalDataRepository;

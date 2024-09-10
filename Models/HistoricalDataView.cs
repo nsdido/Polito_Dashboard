@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Climate_Watch.Models;
+namespace Dashboard.Models;
 
 public class HistoricalDataView {
     public List<HistoricalData> Data { get; set; }

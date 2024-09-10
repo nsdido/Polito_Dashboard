@@ -4,7 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <UserSecretsId>aspnet-Climate_Watch-CD5D5E04-A514-4323-9B43-4F641FDBAF99</UserSecretsId>
+        <UserSecretsId>aspnet-Dashboard-CD5D5E04-A514-4323-9B43-4F641FDBAF99</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 

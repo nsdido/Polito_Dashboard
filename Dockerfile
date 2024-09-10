@@ -7,19 +7,19 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Climate_Watch.csproj", "./"]
-RUN dotnet restore "Climate_Watch.csproj"
+COPY ["Dashboard.csproj", "./"]
+RUN dotnet restore "Dashboard.csproj"
 COPY . .
 WORKDIR "/src/"
-RUN dotnet build "Climate_Watch.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "Dashboard.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "Climate_Watch.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Dashboard.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY ./wwwroot/Images /app/wwwroot/Images
 
-ENTRYPOINT ["dotnet", "Climate_Watch.dll"]
+ENTRYPOINT ["dotnet", "Dashboard.dll"]

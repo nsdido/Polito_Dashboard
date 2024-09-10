@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Climate_Watch.Migrations
+namespace Dashboard.Migrations
 {
     /// <inheritdoc />
     public partial class init : Migration

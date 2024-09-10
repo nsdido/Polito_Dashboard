@@ -8,8 +8,8 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Models;
+using Dashboard.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 
@@ -24,8 +24,8 @@ public class PlaceRepository:IPlaceRepository {
         {
             new Claim(JwtRegisteredClaimNames.Sub, "Dashboard"),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.NameIdentifier, "Climate_Watch_User"),
-            new Claim("IsAdmin", "Climate_Watch_is_Admin"),
+            new Claim(ClaimTypes.NameIdentifier, "Dashboard_User"),
+            new Claim("IsAdmin", "Dashboard_is_Admin"),
         };
 
         // var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSecretKeyThatIsAtLeast32CharactersLong"));

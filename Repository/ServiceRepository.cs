@@ -1,6 +1,6 @@
 ﻿using System.Net;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Models;
+using Dashboard.Repository;
 
 namespace Dashboard.Repository;
 

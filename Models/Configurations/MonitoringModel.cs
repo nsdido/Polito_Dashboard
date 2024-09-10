@@ -1,4 +1,4 @@
-﻿namespace Climate_Watch.Models.Configurations;
+﻿namespace Dashboard.Models.Configurations;
 
 public class MonitoringModel {
     public string Status { get; set; }

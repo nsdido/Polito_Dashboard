@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Climate_Watch.Models
+namespace Dashboard.Models
 {
     public class RegisterViewModel
     {

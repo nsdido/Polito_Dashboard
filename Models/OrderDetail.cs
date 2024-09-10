@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Climate_Watch.Models
+namespace Dashboard.Models
 {
     public class OrderDetail
     {

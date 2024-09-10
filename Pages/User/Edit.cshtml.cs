@@ -1,10 +1,10 @@
-﻿using Climate_Watch.Data;
-using Climate_Watch.Models;
+﻿using Dashboard.Data;
+using Dashboard.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Climate_Watch.Pages.User
+namespace Dashboard.Pages.User
 {
     public class EditModel : PageModel
     {

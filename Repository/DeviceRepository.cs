@@ -2,8 +2,8 @@
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using Climate_Watch.Models;
-using Climate_Watch.Repository;
+using Dashboard.Models;
+using Dashboard.Repository;
 
 namespace Dashboard.Repository;
 
